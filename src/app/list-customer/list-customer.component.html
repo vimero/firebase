@@ -1,0 +1,27 @@
+<div class="col-md-6">
+  <h2>Customers</h2>
+  <button class="btn btn-danger" (click)="addCustomer()"> Add Customer</button>
+  <button class="btn btn-danger" (click)="showKPI()"> Show KPI</button>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Date Birthday</th>
+      <th>Date Death</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.firstName}}</td>
+      <td>{{customer.lastName}}</td>
+      <td>{{customer.age}}</td>
+      <td>{{customer.dateBirthday}}</td>
+      <td>{{customer.dateDeath}}</td>
+      <td><button class="btn btn-danger" (click)="analysisCustomer(customer)" style="margin-left: 20px;"> Analysis</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
